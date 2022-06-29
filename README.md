@@ -6,3 +6,6 @@
 
 
 
+id "Picture"![derry demario](https://user-images.githubusercontent.com/108392262/176457274-98eaba0a-193d-4a47-bfd0-bc9bc4036afa.jpeg)
+id padding-50 px
+id weight- 100px
