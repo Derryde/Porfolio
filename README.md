@@ -1,19 +1,52 @@
 function calculateCarbonFootprint() {
-    const energy = parseFloat(document.getElementById('energy').value);
-    const transportation = parseFloat(document.getElementById('transportation').value);
-    const waste = parseFloat(document.getElementById('waste').value);
 
-    const energyEmissionFactor = 0.5;
-    const transportationEmissionFactor = 2.0;
-    const wasteEmissionFactor = 0.1;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sustainable Building Calculator</title>
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Sustainable Building Calculator</h1>
+        <form id="calculator-form">
+            <label for="energy">Energy Consumption (kWh):</label>
+            <input type="number" id="energy" required>
 
-    const energyEmissions = energy * energyEmissionFactor;
-    const transportationEmissions = transportation * transportationEmissionFactor;
-    const wasteEmissions = waste * wasteEmissionFactor;
+            <label for="transportation">Transportation (miles):</label>
+            <input type="number" id="transportation" required>
 
-    const totalCarbonFootprint = energyEmissions + transportationEmissions + wasteEmissions;
+            <label for="waste">Waste Generation (kg):</label>
+            <input type="number" id="waste" required>
 
-    document.getElementById('carbon-footprint').innerText = `${totalCarbonFootprint.toFixed(2)} kg CO2`;
+            <button type="button" onclick="calculateCarbonFootprint()">Calculate</button>
+        </form>
+
+        <div id="result-container">
+            <h2>Carbon Footprint Result:</h2>
+            <p id="carbon-footprint">-</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
